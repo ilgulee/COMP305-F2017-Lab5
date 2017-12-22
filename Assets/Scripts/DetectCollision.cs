@@ -11,8 +11,11 @@ namespace Assets.Scripts
 		private int _bronzeCoin;
 
 		// Use this for initialization
-		void Start () {
-		
+		void Start ()
+		{
+		    GameStatus.GetInstance().GoldCoins = 0;
+		    GameStatus.GetInstance().SilverCoins = 0;
+            GameStatus.GetInstance().BronzeCoins = 0;
 		}
 	
 		// Update is called once per frame
@@ -30,15 +33,18 @@ namespace Assets.Scripts
 				{
 					case "Gold Coin":
 						_goldCoin++;
+					    GameStatus.GetInstance().GoldCoins++;
 						print(coinKind+": "+_goldCoin);
 						break;
 					case "Silver Coin":
 						_silverCoin++;
-						print(coinKind + ": " + _silverCoin);
+					    GameStatus.GetInstance().SilverCoins++;
+                        print(coinKind + ": " + _silverCoin);
 						break;
 					case "Bronze Coin":
 						_bronzeCoin++;
-						print(coinKind + ": " + _bronzeCoin);
+					    GameStatus.GetInstance().BronzeCoins++;
+                        print(coinKind + ": " + _bronzeCoin);
 						break;
 				}
 				

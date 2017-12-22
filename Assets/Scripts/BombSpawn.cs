@@ -16,14 +16,14 @@ namespace Assets.Scripts
 	
         // Update is called once per frame
         void Update () {
-            if (Input.GetButtonDown("Jump") && numberOfBombs >= 1)
-            {
-                Vector2 spawnPosition=new Vector2(Mathf.RoundToInt(transform.position.x),Mathf.RoundToInt(transform.position.y));
-                Instantiate(Bomb, spawnPosition, Quaternion.identity);
-                numberOfBombs--;
-                //timelapse between placing bombs for 1 sec
-                Invoke("AddBomb",1);
-            }	
+            //if (Input.GetButtonDown("Jump") && numberOfBombs >= 1)
+            //{
+            //    Vector2 spawnPosition=new Vector2(Mathf.RoundToInt(transform.position.x),Mathf.RoundToInt(transform.position.y));
+            //    Instantiate(Bomb, spawnPosition, Quaternion.identity);
+            //    numberOfBombs--;
+            //    //timelapse between placing bombs for 1 sec
+            //    Invoke("AddBomb",1);
+            //}	
         }
 
         private void AddBomb()
